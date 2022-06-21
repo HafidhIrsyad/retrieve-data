@@ -38,7 +38,7 @@ type Coordinates struct {
 func main() {
 	r := mux.NewRouter()
 
-	r.HandleFunc("/random-data", getDataRandom)
+	r.HandleFunc("/users", getDataRandom).Methods("GET")
 
 	srv := &http.Server{
 		Handler: r,
